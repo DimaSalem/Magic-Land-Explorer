@@ -1,1 +1,2 @@
-# MagicLandExplorer
+# Magic Land Explorer
+Magic Land Explorer is a C# console application that allows users to explore various destinations within Magic Land. The application reads data from an external JSON file containing information about different destinations, rides, shows, and dining options in the park. Users can interactively explore the available categories and destinations and view details about specific features using LINQ queries and delegates.
