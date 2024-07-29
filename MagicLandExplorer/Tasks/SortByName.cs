@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace MagicLandExplorer.Tasks
 {
-    internal class SortByName
+    public class SortByName
     {
+        public static string[] GetSortedDestinationsByName(Category[] categories)
+        {
+            var sorted = from category in categories
+                         from destination in category.Destinations
+                         orderby destination.Name
+                         select destination.Name;
+
+            return sorted.ToArray();
+        }
     }
 }

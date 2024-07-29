@@ -1,12 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MagicLandExplorer.Tasks
 {
-    internal class LongestDuration
+    public static class LongestDuration
     {
+        public static string GetLongestDurationDestination(Category[] categories)
+        {
+            var longest = (from category in categories
+                           from destination in category.Destinations
+                           orderby destination.durationTime descending
+                           select destination.Name).FirstOrDefault();
+
+            return longest;
+        }
+
+    
     }
 }
